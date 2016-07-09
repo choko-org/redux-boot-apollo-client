@@ -1,6 +1,8 @@
-# Redux Boot module to use [Apollo Client](https://github.com/apollostack/apollo-client).
+# Redux Boot module: Apollo Client.
 
 [![Build Status](https://travis-ci.org/choko-org/redux-boot-apollo-client.svg?branch=master)](https://travis-ci.org/choko-org/redux-boot-apollo-client)
+
+Redux Boot module to use the [Apollo Client](https://github.com/apollostack/apollo-client).
 
 ## Install
 ```bash
