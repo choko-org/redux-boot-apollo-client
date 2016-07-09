@@ -1,8 +1,6 @@
-# Redux Boot modules's boilerplate.
+# Redux Boot module to use [Apollo Client](https://github.com/apollostack/apollo-client).
 
-[![Build Status](https://travis-ci.org/choko-org/redux-boot-module-boilerplate.svg?branch=master)](https://travis-ci.org/choko-org/redux-boot-module-boilerplate)
-
-Redux Boot module's boilerplate.
+[![Build Status](https://travis-ci.org/choko-org/redux-boot-apollo-client.svg?branch=master)](https://travis-ci.org/choko-org/redux-boot-apollo-client)
 
 ## Install
 ```bash
