@@ -1,16 +1,20 @@
 import ApolloClient from 'apollo-client'
 
-const client = new ApolloClient()
-const apolloReducer = client.reducer()
+export default function createModule(options = {}) {
 
-export default {
-  reducer: (state, action) => ({
-    ...state,
-    apollo: apolloReducer(state.apollo, action)
-  }),
-  middleware: client.middleware(),
-  enhancer: createStore => (reducer, initialState, enhancer) => ({
-    ...createStore(reducer, initialState, enhancer),
-    apolloClient: client
-  })
+  const client = new ApolloClient(options)
+  const apolloReducer = client.reducer()
+
+  return {
+    reducer: (state, action) => ({
+      ...state,
+      // @TODO: Make the reducer prefix customizable.
+      apollo: apolloReducer(state.apollo, action)
+    }),
+    middleware: client.middleware(),
+    enhancer: createStore => (reducer, initialState, enhancer) => ({
+      ...createStore(reducer, initialState, enhancer),
+      apolloClient: client
+    })
+  }
 }

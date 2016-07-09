@@ -13,7 +13,7 @@ npm install redux-boot-apollo-client --save
 
 ```js
 import boot from 'redux-boot'
-import apolloClientModule from 'redux-boot-apollo-client'
+import createApolloClientModule from 'redux-boot-apollo-client'
 
 import React from 'react'
 import { render } from 'react-dom'
@@ -23,6 +23,10 @@ import { ApolloProvider } from 'react-apollo'
 import App from './containers/App'
 
 const initialState = {}
+
+// Create the module with no custom options
+// for the Apollo client instance.
+const apolloClientModule = createApolloClientModule()
 
 const modules = [apolloClientModule]
 

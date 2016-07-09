@@ -1,11 +1,15 @@
 import test from 'tape'
 import boot, {BOOT} from 'redux-boot'
 import ApolloClient from 'apollo-client'
-import apolloClientModule from '../src'
+import createApolloClientModule from '../src'
 
 test('Apollo client reducer', assert => {
   
   const initialState = {}
+
+  // Create the module with no custom options
+  // for the Apollo client instance.
+  const apolloClientModule = createApolloClientModule()
 
   const modules = [apolloClientModule]
 
@@ -36,6 +40,8 @@ test('Apollo client reducer', assert => {
 test('Apollo client enhancer', assert => {
 
   const initialState = {}
+
+  const apolloClientModule = createApolloClientModule()
 
   const modules = [apolloClientModule]
 
